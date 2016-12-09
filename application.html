@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Trucking | Разместить задание</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Style -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="application-page">
+		<header>
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+							<span class="sr-only">Открыть навигацию</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="index.html" class="menu-logo">
+							<img src="img/logo.svg" width="173" height="50" alt="">
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="responsive-menu">
+						<ul class="nav navbar-nav text-uppercase">
+							<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+							<li><a href="tasks.html">Задания</a></li>
+							<li><a href="performers.html">Исполнители</a></li>
+							<li><a href="#">Работодатели</a></li>
+							<li><a href="rules.html">Правила</a></li>
+							<li><a href="#">Частые вопросы</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+							<li class="btn-reg">
+								<i class="list-icon"></i>
+								<a href="#">Регистрация</a>
+							</li>
+							<li class="btn-sign-in">
+								<a href="#" data-toggle="modal" data-target="#modal-1">Вход</a>
+							</li>
+						</ul>
+
+						<div class="dropdown-btn navbar-right visible-sm">
+							<button class="btn dropdown-toggle" data-toggle="dropdown">
+								Вход <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li class="btn-reg"><a href="#">Регистрация</a></li>
+								<li class="btn-sign-in"><a href="#" data-toggle="modal" data-target="#modal-1">Вход</a></li>
+							</ul>
+						</div>
+
+						<ul class="nav navbar-nav visible-xs">
+							<li class="btn-reg"><a href="#">Регистрация</a></li>
+							<li class="btn-sign-in"><a href="#" data-toggle="modal" data-target="#modal-1">Вход</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+			
+<!-- Требуется транспортировка груза? -->
+		<div class="page-title">
+			<h1>Требуется транспортировка груза?</h1>
+		</div>
+		<section class="steps">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<article>
+							<img src="img/application/step-1.svg" width="177" height="130" alt="">
+							<h3>Заполните заявку</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+						</article>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<article>
+							<img src="img/application/step-2.svg" width="177" height="130" alt="">
+							<h3>Получите предложения</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+						</article>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<article>
+							<img src="img/application/step-3.svg" width="177" height="130" alt="">
+							<h3>Выберите исполнителей</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+<!-- Заполнить заявку-->
+		<div class="container">
+			<div class="row">
+				<section class="application-form">
+					<h2>Заполнить заявку</h2>
+					<form action="#" method="post" role="form">
+						<div class="form-group">
+							<select name="type" class="form-control">
+								<option>Грузоперевозки</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
+
+						<div class="form-group clearfix">
+							<div class="radio">
+								<label>
+									<input type="radio" name="type" value="move" checked>
+									<span class="radio-indicator">Переезды</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="furniture">
+									<span class="radio-indicator">Мебель и бытовая техника</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="garbage">
+									<span class="radio-indicator">Вывоз мусора</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="transportation">
+									<span class="radio-indicator">Пассажирские перевозки</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="intercityTransportation">
+									<span class="radio-indicator">Междугородние перевозки</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="constructionGoods">
+									<span class="radio-indicator">Строительные грузы и оборудование</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="oversizedCargo">
+									<span class="radio-indicator">Негабаритный груз</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="transport">
+									<span class="radio-indicator">Транспортные средства</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="loaders">
+									<span class="radio-indicator">Услуги грузчиков</span>
+								</label>
+								<label>
+									<input type="radio" name="type" value="anotherCargo">
+									<span class="radio-indicator">Другой груз</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<textarea name="descriprion" class="form-control" rows="6" placeholder="Описание"></textarea>
+						</div>
+
+						<div class="form-group clearfix">
+							<span class="pull-left">Вес груза: </span>
+							<div class="radio radio-weight">
+								<label>
+									<input type="radio" name="cargoWeight" value="lessThan5" checked>
+									<span class="radio-indicator">до 5кг</span>
+								</label>
+								<label>
+									<input type="radio" name="cargoWeight" value="5-15">
+									<span class="radio-indicator">5-15кг</span>
+								</label>
+								<label>
+									<input type="radio" name="cargoWeight" value="15-35">
+									<span class="radio-indicator">15кг-30кг</span>
+								</label>
+								<label>
+									<input type="radio" name="cargoWeight" value="30-60">
+									<span class="radio-indicator">30-60кг</span>
+								</label>
+								<label>
+									<input type="radio" name="cargoWeight" value="moreThan60">
+									<span class="radio-indicator">более 60кг</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-group requirements">
+							<label>
+								<input type="checkbox" name="requirements" checked>
+								<span class="btn">Требуется погрузка/выгрузка</span>
+							</label>
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="address1" class="form-control" placeholder="Адрес">
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="address2" class="form-control" placeholder="Адрес">
+						</div>
+
+						<h4>Когда нужно приступить к заданию</h4>
+						<div class="form-group date">
+							<label>
+								<input type="radio" name="date" value="today" checked>
+								<span class="btn btn-info">Сегодня</span>
+							</label>
+							<label>
+								<input type="radio" name="date" value="tomorrow">
+								<span class="btn btn-info">Завтра</span>
+							</label>
+							<label>
+								<input type="radio" name="date" value="calendar">
+								<span class="btn btn-info btn-calendar">Укажите дату</span>
+							</label>
+							<label>
+								<input type="checkbox" name="time" value="time">
+								<span class="btn btn-info btn-time">Время</span>
+							</label>
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="budget" class="form-control" placeholder="Укажите бюджет задания">
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-6">
+									<input type="text" name="name-field" class="form-control" placeholder="Ваше имя">
+								</div>
+								<div class="col-xs-6">
+									<input type="text" name="surname-field" class="form-control" placeholder="Ваша фамилия">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<input type="tel" name="tel" class="form-control" placeholder="Телефон">
+						</div>
+
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="subscribe" checked> Получать email - уведомления о новых предложениях
+								<span class="checkbox-indicator"></span>
+							</label>
+						</div>
+
+						<hr>
+
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="rules" checked> Я согласен с правилами сайта
+								<span class="checkbox-indicator"></span>
+							</label>
+						</div>
+
+						<button type="submit" class="btn btn-info center-block">Отправить</button>
+					</form>
+				</section>
+			</div>
+		</div>
+		
+<!-- Футер -->
+		<footer>
+			<div class="container">
+				<div class="col-xs-12 col-md-3">
+					<a href="#" class="footer-logo">
+						<img src="img/logo.svg" width="173" height="50" alt="">
+					</a>
+					<p class="copyright">Copyrights © 2016 Trucking. <br>Все права защищины.</p>
+				</div>
+				<div class="col-1 col-md-2 hidden-xs hidden-sm">
+					<ul class="list">
+						<li><a href="#">Мой профиль</a></li>
+						<li><a href="#">Сообщения</a></li>
+						<li><a href="#">Проекты</a></li>
+						<li><a href="#">Заказы</a></li>
+						<li><a href="#">Настройки</a></li>
+						<li><a href="#">Выход</a></li>
+					</ul>
+				</div>
+				<div class="col-2 col-md-2 hidden-xs hidden-sm">
+					<ul class="list">
+						<li><a href="#">Найти работу</a></li>
+						<li><a href="#">Выбрать специалиста</a></li>
+						<li><a href="#">Заполнить портфолио</a></li>
+						<li><a href="#">Добавить услуги</a></li>
+						<li><a href="#">Загрузить резюме</a></li>
+					</ul>
+				</div>
+				<div class="col-3 col-md-2 hidden-xs hidden-sm">
+					<ul class="list">
+						<li><a href="#">Сервисы</a></li>
+						<li><a href="#">Поиск по сайту</a></li>
+						<li><a href="#">Безопасная сделка</a></li>
+						<li><a href="#">Аккаунт PRO</a></li>
+						<li><a href="#">Реклама проиля на сайте</a></li>
+					</ul>
+				</div>
+				<div class="col-4 col-md-2 hidden-xs hidden-sm">
+					<ul class="list">
+						<li><a href="#">О сайте</a></li>
+						<li><a href="#">Помощь</a></li>
+						<li><a href="#">Правила</a></li>
+						<li><a href="#">Команда</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Клиенты</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+<!-- Модальное окно -->
+
+	<div class="modal fade" id="modal-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" type="button" data-dismiss="modal"><i class="fa fa-close"></i></button>
+					<h4 class="modal-title">Название окна</h4>
+				</div>
+				<div class="modal-body clearfix">
+					<div class="col-md-12">
+						<div class="panel panel-login">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-6">
+										<a href="#" class="active" id="login-form-link">Вход</a>
+									</div>
+									<div class="col-xs-6">
+										<a href="#" id="register-form-link">Регистрация</a>
+									</div>
+								</div>
+								<hr>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-lg-12">
+										<form id="login-form" action="#" method="post" role="form" style="display: block;">
+											<div class="form-group">
+												<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Логин" value="">
+											</div>
+											<div class="form-group">
+												<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Пароль">
+											</div>
+											<div class="form-group text-center">
+												<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+												<label for="remember"> Запомнить меня</label>
+											</div>
+											<div class="form-group">
+												<div class="row">
+													<div class="col-sm-6 col-sm-offset-3">
+														<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Войти">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="text-center">
+															<a href="#" tabindex="5" class="forgot-password">Забыл пароль?</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+										<form id="register-form" action="#" method="post" role="form" style="display: none;">
+											<div class="form-group">
+												<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Логин" value="">
+											</div>
+											<div class="form-group">
+												<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="">
+											</div>
+											<div class="form-group">
+												<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Пароль">
+											</div>
+											<div class="form-group">
+												<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Повторите пароль">
+											</div>
+											<div class="form-group">
+												<div class="row">
+													<div class="col-sm-6 col-sm-offset-3">
+														<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Зарегистрироваться">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Скрипт -->
+		<script src="js/script.js"></script>
+	</body>
+</html>

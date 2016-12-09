@@ -1,0 +1,1925 @@
+body {
+	font-size: 13px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #6f6f6f;
+	background-color: #ffffff;
+	outline: none;
+}
+
+/* ====================== Общие стили ====================== */
+
+/* Заголовки*/
+body > div:not([class^="modal"]) {
+	margin-bottom: 40px;
+}
+
+.page-title {
+	position: relative;
+	margin-bottom: 30px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #32beeb;
+}
+
+.page-title h1 {
+	display: inline-block;
+	margin: 0;
+	padding: 25px 0;
+	font-size: 30px;
+	font-weight: 400;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h4 {
+	line-height: 1.3;
+}
+
+/* Кнопки */
+.btn {
+	padding: 10px 15px;
+	font-size: 13px;
+	border-radius: 3px;
+}
+
+.btn-info {
+	background-color: #32beeb;
+	border: 2px solid #32beeb;
+}
+
+.btn-info:hover {
+	background-color: #31C7F6;
+	border-color: #31C7F6;
+}
+
+.btn-default {
+	color: #32beeb;
+	background-color: #ffffff;
+	border: 2px solid #32beeb;
+}
+
+.btn-default:hover {
+	color: #ffffff;
+	background-color: #32beeb;
+	border-color: transparent;
+}
+
+/* Списки */
+.list {
+	padding-left: 0;
+	list-style: outside url(../img/icons/list-icon.svg);
+}
+
+.list li {
+	margin-bottom: 10px;
+}
+
+/* Иконки */
+.list-icon {
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	background: url(../img/icons/list-icon.svg) no-repeat center center;
+}
+
+/* Сайдбар */
+.wrapper {
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+.sidebar-toggle {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 20px;
+	margin-top: -9px;
+	padding: 0;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.sidebar-toggle .icon-bar {
+	display: block;
+	height: 2px;
+	margin-bottom: 5px;
+	background: #ffffff;
+	border-radius: 5px;
+}
+
+.sidebar {
+	margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #f9fdff;
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	transition: left 0.6s ease-out 0.1s;
+}
+
+.sidebar .list {
+	margin-bottom: 30px;
+	padding-left: 15px;
+}
+
+.sidebar .list a {
+	color: #3e3e3e;
+}
+
+.sidebar h3 {
+	margin-bottom: 20px;
+	font-weight: bold;
+	text-align: left;
+	color: #3e3e3e;
+}
+
+/* Список заданий */
+.preview {
+	margin-bottom: 30px;
+}
+
+.preview .item {
+	margin-top: 0;
+	padding: 15px 0;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.preview .item .reviews {
+	color: #8b8b8b;
+	text-decoration: none;
+}
+
+.preview .item .reviews-count {
+	color: #32beeb;
+}
+
+.preview .item .title {
+	float: left;
+	max-width: 70%;
+	font-size: 18px;
+}
+
+.preview .item .price {
+	float: right;
+	display: block;
+	min-width: 105px;
+	min-height: 30px;
+	font-size: 16px;
+	text-align: center;
+	color: #32beeb;
+	background: url(../img/icons/price-bg.svg) no-repeat center center;
+	background-size: contain;
+}
+
+.preview .price span {
+	padding: 5px 20px;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+.preview .item .fa-clock-o {
+	margin-right: 5px;
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+.preview .item .description {
+	margin-top: 10px;
+}
+
+/* Постраничный навигатор */
+.pagination>li>a, 
+.pagination>li>span {
+	margin-left: 3px;
+	padding: 2px 7px;
+	font-size: 16px;
+	color: #3e3e3e;
+	border: none;
+}
+
+.pagination>li>a:focus, 
+.pagination>li>a:hover, 
+.pagination>li>span:focus, 
+.pagination>li>span:hover {
+	color: #32beeb;
+	background-color: transparent;
+}
+
+.pagination>.disabled>a, 
+.pagination>.disabled>a:focus, 
+.pagination>.disabled>a:hover, 
+.pagination>.disabled>span, 
+.pagination>.disabled>span:focus, 
+.pagination>.disabled>span:hover {
+	color: #bdbdbd;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+	color: #32beeb;
+	background-color: transparent;
+	border: 1px solid #32beeb;
+	border-radius: 3px;
+}
+
+/* Навигационное меню */
+
+.navbar {
+	margin-bottom: 0;
+	padding: 15px;
+	background-color: transparent;
+	border-bottom: 2px solid #cfcfcf;
+}
+
+.navbar .menu-logo {
+	margin-right: 30px;
+}
+
+.navbar-default .navbar-nav {
+	margin-top: 10px;
+}
+
+.navbar-default .navbar-nav i {
+	font-size: 16px;
+}
+
+.navbar-default .navbar-nav>li {
+	padding: 0 8px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	padding: 3px 0;
+	color: #6f6f6f;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	color: #5bcbef;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a {
+	border-bottom: 2px solid #32beeb;
+}
+
+.navbar-default .navbar-right {
+	margin-top: 3px;
+	margin-right: 0;
+}
+
+.navbar-default .navbar-nav > .btn-reg a {
+	display: inline-block;
+	padding: 10px 0;
+}
+
+.navbar-default .navbar-nav > .btn-reg a, 
+.navbar-default .navbar-nav > .btn-reg a:hover {
+	color: #32beeb;
+}
+
+.navbar-default .navbar-nav > .btn-sign-in a {
+	padding: 10px;
+	color: #32beeb;
+	border: 1px solid #32beeb;
+	border-radius: 3px;
+}
+
+.navbar-default .navbar-nav > .btn-sign-in a:hover {
+	color: #ffffff;
+	background-color: #32beeb;
+}
+
+.navbar-default .dropdown-btn {
+	position: relative;
+}
+
+.navbar-default .dropdown-btn .btn {
+	background-color: transparent;
+	border: 1px solid #32beeb;
+	border-radius: 3px;
+}
+
+.navbar-default .dropdown-btn .btn:hover, 
+.navbar-default .dropdown-btn .btn:focus {
+	color: #ffffff;
+	background-color: #32beeb;
+}
+
+.navbar-default .dropdown-btn .dropdown-menu {
+	background-color: #ffffff;
+	border: 2px solid #32beeb;
+}
+
+.navbar-default .dropdown-btn a {
+	color: #6f6f6f;
+}
+
+.navbar-default .dropdown-btn a:hover {
+	color: #32beeb;
+	background-color: #F4F4F4;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #32beeb;
+}
+
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+	background-color: #F5F5F5;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #32beeb;
+}
+
+/* Форма авторизации */
+.panel-login {
+	border-color: #ccc;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: #32beeb;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	transition: all 0.1s linear;
+}
+
+.panel-login input:focus {
+	outline:none;
+	box-shadow: none;
+	border-color: #32beeb;
+}
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #32beeb;
+	border-color: #32beeb;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+/* Карта */
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                        Страница - "Главная"                                                *
+*                                                                                                            *
+*************************************************************************************************************/
+
+
+/* ====================== Слайдер ====================== */
+
+.slider {
+	position: relative;
+	min-height: 518px;
+	background: #b3e2e8 url('../img/index/slider-bg.jpg') no-repeat center top;
+	background-size: cover;
+}
+
+.slider .slider-btns {
+	position: absolute;
+	min-width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	bottom: 60px;
+}
+
+/* ====================== Задания ====================== */
+
+.tasks h2 {
+	margin-bottom: 25px;
+	color: #32beeb;
+}
+
+.tasks .item:first-child {
+	border-top: 1px solid #dcdcdc;
+}
+
+.tasks .item .title {
+	color: #414141;
+}
+
+.tasks .item .price {
+	min-width: 50px;
+	min-height: 20px;
+	background: none;
+}
+
+.tasks .item time {
+	font-size: 12px;
+	color: #a0a0a0;
+}
+
+.tasks .item .fa-clock-o {
+	color: #32beeb;
+}
+
+.tasks .item .description {
+	color: #505050;
+}
+
+.tasks .tasks-btns {
+	width: 300px;
+	margin: 0 auto;
+}
+
+/* ====================== Задания по категориям ====================== */
+
+.categories h2 {
+	margin-bottom: 40px;
+	color: #32beeb;
+}
+
+.categories .list a {
+	color: #1a1a1a;
+}
+
+.categories .list span {
+	color: #aeaeae;
+}
+
+/* ====================== Лучшие исполнители ====================== */
+
+.performers {
+	text-align: center;
+}
+
+.performers h2 {
+	margin-bottom: 40px;
+	color: #32beeb;
+}
+
+.performers div[class^="col-"] {
+	margin-bottom: 50px;
+}
+
+.performers img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.performers a {
+	color: #414141;
+}
+
+/* ====================== С нами вы экономите на услугах ====================== */
+
+.economy h2 {
+	margin-top: 0;
+	color: #32beeb;
+}
+
+.economy h3 {
+	margin-top: 0;
+	margin-bottom: 50px;
+	text-align: center;
+	color: #8b8b8b;
+}
+
+.economy div[class^="col-"] {
+	margin-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.economy article {
+	display: block;
+	max-width: 300px;
+	height: auto;
+	margin: 0 auto;
+	box-shadow: inset 0 0 0 1px #d3d3d3;
+	border-radius: 5px;
+}
+
+.economy img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.economy h4 {
+	margin: 30px 0 20px;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #32beeb;
+}
+
+.economy p {
+	padding: 0 20px 40px;
+}
+
+/* ====================== Преимущества ====================== */
+
+.advantages {
+	padding: 40px 0;
+	background-color: #f2f0f1;
+}
+
+.advantages .row {
+	margin-bottom: 40px;
+}
+
+.advantages h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #32beeb;
+}
+
+.advantages .item {
+	width: 230px;
+	margin: 0 auto;
+}
+
+.advantages .item h3 {
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #2f2f2f;
+}
+
+.advantages .item h3::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 20px;
+	height: 2px;
+	margin-left: -10px;
+	background-color: #32beeb;
+}
+
+.advantages p {
+	text-align: justify;
+	color: #8b8b8b;
+}
+
+.advantages .arrow {
+	position: absolute;
+	top: 32px;
+	left: 92%;
+	width: 45px;
+	height: 2px;
+	background-color: #929292;
+}
+
+.advantages .arrow::after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: -3px;
+	right: -5px;
+	border: 5px solid transparent;
+	border-left-color: #929292;  
+	border-width: 4px 0 4px 7px;
+}
+
+.advantages .step {
+	min-height: 283px;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: cover;
+}
+
+.advantages .step div {
+	width: 44%;
+	padding: 7% 4%;
+}
+
+.advantages .step-1 {
+	background-image: url('../img/index/step-1.jpg');
+	background-color: #3282a7;
+}
+
+.advantages .step-2 {
+	background-image: url('../img/index/step-2.jpg');
+	background-color: #55accc;
+	background-position: left top;
+}
+
+.advantages .step-2 div {
+	float: right;
+}
+
+
+.advantages .step-3 {
+	background-image: url('../img/index/step-3.jpg');
+	background-color: #55b2ec;
+}
+
+.advantages .step h3 {
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.advantages .step p {
+	color: #ffffff;
+}
+
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                        Страница - "Заявлеие"                                               *
+*                                                                                                            *
+*************************************************************************************************************/
+
+/* ====================== Навигация ====================== */
+
+.application-page .navbar {
+	border-bottom: none;
+}
+
+/* ====================== Требуется транспортировка груза? ====================== */
+
+.application-page .steps {
+	margin-bottom: 30px;
+	padding-top: 40px;
+	background-color: #f2fcff;
+}
+
+.application-page .steps img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.application-page .steps h3 {
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #3e3e3e;
+}
+
+.application-page .steps h3::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 20px;
+	height: 2px;
+	margin-left: -10px;
+	background-color: #32beeb;
+}
+
+.application-page .steps p {
+	margin-bottom: 40px;
+	padding: 0 20px;
+	text-align: justify;
+	color: #414141;
+}
+
+/* ====================== Заполнить заявку ====================== */
+.application-page .application-form {
+	width: 500px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	padding: 30px 40px;
+	background-color: #fcfcf8;
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	box-shadow: 0 1px 5px -2px rgba(0, 0, 0, 0.7);
+}
+
+.application-page .application-form h2 {
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #3e3e3e;
+}
+
+.application-page .application-form .form-group {
+	margin-bottom: 25px;
+}
+
+.application-page .radio label {
+	padding: 0;
+	margin-bottom: 5px;
+}
+
+.application-page .radio input {
+	display: none;
+}
+
+.application-page .radio .radio-indicator {
+	padding: 3px 8px;
+	color: #32beeb;
+}
+
+.application-page .radio .radio-indicator:hover {
+	text-decoration: underline;
+}
+
+.application-page .radio input:checked + .radio-indicator {
+	color: #abab95;
+	border: 1px solid #abab95;
+	border-radius: 3px;
+}
+
+.application-page form textarea {
+	max-width: 100%;
+}
+
+.application-page .radio-weight {
+	float: right;
+	width: 83%;
+	margin: 0;
+	margin-left: 5px;
+}
+
+.application-page .requirements input {
+	display: none;
+}
+
+.application-page .requirements .btn {
+	position: relative;
+	padding-left: 40px;
+	color: #ffffff;
+	background-color: #7f7f7f;
+}
+
+.application-page .requirements .btn:hover {
+	background-color: #888888;
+}
+
+.application-page .requirements .btn::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+}
+
+.application-page .requirements input:checked + .btn::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	background-color: #ffffff;
+	border-radius: 50%;
+}
+
+.application-page h4 {
+	color: #3e3e3e;
+}
+
+.application-page .date {
+	text-align: center;
+}
+
+.application-page .date input {
+	display: none;
+}
+
+.application-page .date input:checked + .btn {
+	background-color: #abab95;
+	border-color: #abab95;
+	outline: none;
+}
+
+.application-page .date .btn-calendar {
+	text-align: left;
+	padding-right: 40px;
+	background: #32beeb url(../img/icons/calendar-icon.svg) no-repeat 95% center;
+}
+
+.application-page .date .btn-time {
+	text-align: left;
+	padding-right: 40px;
+	background: #32beeb url(../img/icons/time-icon.svg) no-repeat 90% center;
+}
+
+.application-page .checkbox:last-of-type {
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.application-page .checkbox input {
+	display: none;
+}
+
+.application-page .checkbox label {
+	position: relative;
+	padding-left: 30px;
+}
+
+.application-page .checkbox .checkbox-indicator {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	margin-top: -9px;
+	border: 1px solid #c3c3c3;
+	border-radius: 3px; 
+}
+
+.application-page .checkbox input:checked + .checkbox-indicator::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 13px;
+	height: 13px;
+	background: url(../img/icons/checkmark-icon.svg) no-repeat center center;
+}
+
+.application-page .application-form hr {
+	border-color: #c3c3c3;
+}
+
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                        Страница - "Задания"                                                *
+*                                                                                                            *
+*************************************************************************************************************/
+
+
+/* ====================== Сайдбар ====================== */
+
+.tasks-page .page-title h1 {
+	margin-right: 20px;
+}
+
+.tasks-page .page-title .address {
+	font-size: 18px;
+	vertical-align: middle;
+	color: #ffffff;
+}
+
+.tasks-page .page-title .fa-map-marker {
+	margin-right: 10px;
+	font-size: 22px;
+	color: #ffa800;
+}
+
+.tasks-page .sidebar .map {
+	margin-bottom: 30px;
+}
+
+.tasks-page .performers div[class^="col-"] {
+	margin-bottom: 0;
+}
+
+.tasks-page .performers hr {
+	margin-bottom: 30px;
+	border-color: #cbc79e;
+}
+
+/* ====================== Список заданий ====================== */
+
+.tasks-page .preview {
+	margin-bottom: 0;
+}
+
+.tasks-page .item {
+	padding: 30px 0
+}
+
+.tasks-page .item:first-child {
+	padding-top: 0;
+}
+
+.tasks-page .item:last-child {
+	border-bottom-color: #7dd1f0;
+}
+
+.tasks-page .item .pull-left {
+	padding-right: 15px;
+}
+
+.tasks-page .pull-left a {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.tasks-page .item .name {
+	font-size: 14px;
+	color: #1e1e1e;
+}
+
+.tasks-page .item .title {
+	color: #11a0ce;
+}
+
+.tasks-page .item .description {
+	color: #8b8b8b;
+}
+
+.tasks-page .item .address {
+	margin-bottom: 5px;
+	color: #5c5c5c;
+}
+
+.tasks-page .item .fa-map-marker {
+	margin-right: 5px;
+	font-size: 16px;
+	color: #ffa800;
+}
+
+.tasks-page .item time {
+	color: #5c5c5c;
+}
+
+.tasks-page .item .fa-clock-o {
+	color: #f73c0a;
+}
+
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                      Страница - "Исполнители"                                              *
+*                                                                                                            *
+*************************************************************************************************************/
+
+/* ====================== Сайдбар ====================== */
+
+.performers-page .sidebar h3 {
+	margin-top: 0;
+	font-weight: 400;
+}
+
+.performers-page .address span {
+	margin-right: 20px;
+	font-size: 16px;
+	color: #3e3e3e;
+}
+
+.performers-page .address a {
+	text-decoration: underline;
+	color: #32beeb;
+}
+
+.performers-page .address .fa-map-marker {
+	margin-right: 5px;
+	font-size: 16px;
+	color: #b2d9f6;
+}
+
+/* ====================== Список исполнителей ====================== */
+
+.performers-page .item .media-header {
+	float: left;
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.performers-page .item .photo, 
+.performers-page .item .info {
+	float: left;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.performers-page .item .info {
+	padding: 25px 10px;
+}
+
+.performers-page .item .name {
+	display: block;
+	margin-bottom: 10px;
+	color: #414141;
+}
+
+.performers-page .item .status {
+	padding: 2px 6px;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: #d3d3d3;
+	border-radius: 2px;
+}
+
+.performers-page .item .status::after {
+	content: 'вышел';
+}
+
+.performers-page .item .status.online {
+	background-color: #bed75c;
+}
+
+.performers-page .item .status.online::after {
+	content: 'на сайте';
+}
+
+.performers-page .item .fa {
+	margin-left: 5px;
+	font-size: 18px;
+	vertical-align: middle;
+}
+
+.performers-page .item .like-icon {
+	color: #FF2591;
+}
+
+.performers-page .item .dislike-icon {
+	color: #86b3c1;
+}
+
+.performers-page .item .count {
+	color: #373737;
+}
+
+.performers-page .item .media-body {
+	min-width: 290px;
+}
+
+.performers-page .item .icon {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.performers-page .item .star-icon {
+	width: 23px;
+	height: 23px;
+	background: url(../img/icons/star.svg) no-repeat center center;
+}
+
+.performers-page .item .polygon-icon {
+	width: 23px;
+	height: 22px;
+	background: url(../img/icons/polygon.svg) no-repeat center center;
+}
+
+.performers-page .item .lightning-icon {
+	width: 15px;
+	height: 20px;
+	background: url(../img/icons/lightning.svg) no-repeat center center;
+}
+
+.performers-page .item .description {
+	font-style: italic;
+	color: #505050;
+}
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                        Страница - "Правила"                                                *
+*                                                                                                            *
+*************************************************************************************************************/
+
+/* ====================== Сайдбар ====================== */
+
+.rules-page .sidebar .list {
+	margin-bottom: 0;
+}
+
+.rules-page .sidebar li.active a {
+	color: #39c0ec;
+}
+
+.rules-page .content .row {
+	margin-bottom: 30px;
+}
+
+.rules-page .content .row:last-of-type {
+	margin-bottom: 0;
+	border-bottom: 1px solid #7dd1f0;
+}
+
+.rules-page .content h3 {
+	margin-top: 0;
+	font-size: 21px;
+	color: #3e3e3e;
+}
+
+.rules-page .content p {
+	color: #505050;
+}
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                        Страница - "Профиль"                                                *
+*                                                                                                            *
+*************************************************************************************************************/
+
+/* ====================== Анкета ====================== */
+
+.profile-page .info {
+    padding: 30px 0;
+    color: #3e3e3e;
+    background-color: #effbff;
+}
+
+.profile-page .info h3 {
+    margin-top: 10px;
+}
+
+.profile-page .info ul li {
+    margin-bottom: 5px;
+}
+
+.profile-page .info .icon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-page .info .age-icon {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/icons/age-icon.svg);
+}
+
+.profile-page .info .address-icon {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/icons/address-icon.svg);
+}
+
+.profile-page .info .complied-icon {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/icons/complied-icon.svg);
+}
+
+.profile-page .info .created-icon {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/icons/created-icon.svg);
+}
+
+.profile-page .info .price-icon {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/icons/price-icon.svg);
+}
+
+.profile-page .info .price-icon + strong {
+    color: #32beeb;
+}
+
+.profile-page .right-block > div {
+    margin: 15px 0;
+}
+
+.profile-page .right-block .blue-star-icon {
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/icons/blue-srar-icon.svg);
+}
+
+.profile-page .right-block .reviews-count {
+    display: inline;
+    vertical-align: middle;
+    color: #282828;
+}
+
+.profile-page .right-block .rating-count {
+    color: #32beeb;
+}
+
+.profile-page .right-block .star-icon {
+	width: 23px;
+	height: 23px;
+	background-image: url(../img/icons/star.svg);
+}
+
+.profile-page .right-block .polygon-icon {
+	width: 23px;
+	height: 21px;
+	background-image: url(../img/icons/polygon.svg);
+}
+
+.profile-page .right-block .lightning-icon {
+	width: 15px;
+	height: 20px;
+	background-image: url(../img/icons/lightning.svg);
+}
+
+/* ====================== Контент ====================== */
+
+.profile-page .content {
+    padding: 30px 0 20px;
+}
+
+.profile-page .tab-content div {
+    padding-top: 15px;
+}
+
+.nav-tabs>li>a {
+    color: #3e3e3e;
+    text-transform: uppercase;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover {
+    color: #32beeb;
+    border: none;
+    border-bottom: 2px solid #32beeb;
+}
+
+.profile-page .tab-content p {
+    color: #505050;
+}
+
+/* ====================== Отзывы ====================== */
+
+.profile-page .reviews-list h4 {
+    text-transform: uppercase;
+    color: #3e3e3e;
+}
+
+.profile-page .reviews-list .media-list {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7dd1f0;
+}
+
+.profile-page .reviews-list .item {
+    margin-bottom: 25px;
+    padding: 15px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profile-page .reviews-list .pull-left {
+	padding-right: 15px;
+}
+
+.profile-page .reviews-list .media-object {
+    margin: 0 auto 5px;
+}
+
+.profile-page .reviews-list .name {
+    color: #32beeb;
+    font-size: 16px;
+}
+
+.profile-page .media-body p {
+    font-size: 15px;
+    color: #515050;
+}
+
+.profile-page .media-body em {
+    padding-left: 18px;
+    color: #343333;
+    background: url(../img/icons/quotes.svg) no-repeat left top;
+}
+
+.profile-page .media-footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dce5e7;
+}
+
+.profile-page .media-footer .title {
+    color: #6f7070;
+}
+
+.rating {
+    display: inline-block;
+    position: relative;
+    width: 85px;
+    height: 15px;
+    margin-left: 5px;
+    padding: 0;
+    vertical-align: middle;
+    list-style: none;
+    background: url(../img/icons/rating-srar.svg);
+}
+
+.rating li {
+    float: left;
+    height: 15px;
+}
+
+.rating li.active {
+    z-index: 1;
+    background: url(../img/icons/rating-srar.svg) left bottom;
+}
+
+.rating li span[class*="star"] {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 17px;
+    height: 15px;
+}
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                        Страница - "Задание"                                                *
+*                                                                                                            *
+*************************************************************************************************************/
+
+/* ====================== Описание задания ====================== */
+
+.task-info-page {
+    color: #3e3e3e;
+}
+
+.task-info-page .task-info {
+    margin-top: 30px;
+}
+
+.task-info-page .preview .item {
+    padding: 0;
+    border: none;
+}
+
+.task-info-page .item h3 {
+    float: left;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.task-info-page .status-bar {
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 12px;
+    background-color: #f3fcff;
+}
+
+.task-info-page .status-bar .list-inline {
+    margin: 0;
+}
+
+.task-info-page .status-bar li {
+    margin-right: 10px;
+}
+
+.task-info-page .status-bar .icon {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.task-info-page .status-bar .done-icon {
+    width: 19px;
+    height: 12px;
+    background: url(../img/icons/done-icon.svg);
+}
+
+.task-info-page .status-bar .views-icon {
+    width: 17px;
+    height: 9px;
+    background: url(../img/icons/views-icon.svg);
+}
+
+.task-info-page .status-bar .create-icon {
+    width: 14px;
+    height: 13px;
+    background: url(../img/icons/create-icon.svg);
+}
+
+.task-info-page .info-table {
+    padding: 0 15px;
+    box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.task-info-page .table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.task-info-page .info-table td {
+    padding: 10px;
+    border: none;
+}
+
+.task-info-page .info-table td:first-of-type {
+    border-right: 1px solid #dfdfdf;
+    text-transform: uppercase;
+    color: #32beeb;
+}
+
+.task-info-page .info-table .border-bottom td {
+    padding: 0;
+    border-right: none;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.task-info-page .right-block h4 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.task-info-page .right-block section {
+    margin-bottom: 25px;
+}
+
+.task-info-page .right-block img {
+    float: left;
+    margin-right: 10px;
+}
+
+.task-info-page .right-block .info {
+    float: left
+}
+
+.task-info-page .right-block .info > span {
+    display: block;
+    padding: 5px;
+}
+
+.task-info-page .right-block .name {
+    font-weight: 700;
+    color: #414141;
+}
+
+.task-info-page .right-block span {
+    color: #8b8b8b;
+}
+
+.task-info-page .right-block .reviews-count {
+    color: #32beeb;
+}
+
+.task-info-page .right-block .map {
+    width: 100%;
+    height: 178px;
+    margin-bottom: 25px;
+}
+
+.task-info-page .right-block .btn-center {
+    text-align: center;
+}
+
+/* ====================== Отзывы ====================== */
+
+.task-info-page .reviews-list h3 {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+
+.task-info-page .reviews-list h3 + span {
+    font-size: 18px;
+    color: #3e3e3e;
+}
+
+.task-info-page .reviews-list .rating-count {
+    color: #32beeb;
+}
+
+.task-info-page .reviews-list .rating-count + em {
+    font-size: 13px;
+}
+
+.task-info-page .media:first-child {
+    margin-top: 15px;
+}
+
+.task-info-page .reviews-list .item {
+    margin-bottom: 25px;
+    padding: 15px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.task-info-page .reviews-list .pull-left {
+    padding-right: 15px;
+}
+
+.task-info-page .reviews-list .name {
+    font-size: 18px;
+    color: #414141;
+}
+
+.task-info-page .media-body p {
+    color: #8b8b8b;
+}
+
+.task-info-page .media-body .reviews {
+    margin-top: 10px;
+}
+
+.task-info-page .media-body .reviews-count {
+    color: #32beeb;
+}
+
+.task-info-page .media-body .reviews-title {
+    color: #505050;
+}
+
+.task-info-page .reviews-list .review-text {
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    padding-left: 18px;
+    padding-bottom: 30px;
+    background: url(../img/icons/quotes.svg) no-repeat left top;
+    border-bottom: 1px solid #dce5e7;
+}
+
+.task-info-page .review-text em {
+    font-size: 15px;
+    color: #505050;
+}
+
+.task-info-page .media-footer {
+    float: left;
+    margin-left: 10px;
+}
+
+.task-info-page .media-footer .title {
+    color: #6f7070;
+}
+
+.task-info-page .media-footer > div {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.task-info-page .offers p {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #dfeaee;
+}
+
+/* ====================== Комментарии ====================== */
+
+.task-info-page .comments-list .media {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.task-info-page .comments-list .media:last-of-type {
+    border: none;
+}
+
+.task-info-page .comments-list .pull-left {
+    margin-right: 15px;
+}
+
+.task-info-page .comments-list .media-heading {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.task-info-page .comments-list time {
+    font-size: 12px;
+    color: #49c3ec;
+}
+
+.task-info-page .comments-list .media-footer {
+    margin-top: 15px;
+    padding-left: 18px;
+    background: url(../img/icons/quotes.svg) no-repeat left top;
+}
+
+.task-info-page .comments-list .comment-text {
+    font-size: 16px;
+    color: #505050;
+    font-style: italic;
+}
+
+
+/* ====================== ФУТЕР ====================== */
+
+footer {
+	position: relative;
+	padding: 20px;
+	border-top: 1px solid #f2f0f1;
+	border-bottom: 8px solid #32beeb;
+}
+
+.footer-logo img {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+footer .copyright {
+	color: #929292;
+}
+
+footer .list a {
+	color: #414141;
+}
+
+footer .col-1 {
+	width: 18%;
+}
+
+footer .col-2 {
+	width: 23%
+}
+
+footer .col-3 {
+	width: 24%
+}
+
+footer .col-4 {
+	width: 10%
+}
+
+/* ====================== Медиа запросы ====================== */
+
+@media (min-width:1200px) {
+	.container { width:970px; }
+}
+
+@media (max-width: 991px) {
+	
+	/* Навигация */
+	.navbar .menu-logo { margin-right: 10px; }
+
+	.navbar .menu-logo img {
+		width: 140px;
+		height: auto;
+	}
+
+	.navbar-default .navbar-nav { margin-top: 5px; }
+
+	.navbar-default .navbar-right { margin-top: 0; }
+
+	.navbar-default .navbar-nav > li > a { font-size: 11px; }
+
+	/* Слайдер */
+	.slider { min-height: 418px; }
+
+	/* Лучшие исполнители */
+	.performers a { font-size: 12px; }
+
+	/* С нами вы экономите на услугах*/
+	.economy h4 { font-size: 13px; }
+
+	/* Футер */
+	.footer-logo img {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	footer .copyright {
+		float: right;
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+	
+	/*******************************
+	*    Страница - "Заявление"    *
+	*******************************/
+
+	.application-page .steps h3 { font-size: 16px; }
+	
+	/*******************************
+	*   Страница - "Исполнители"   *
+	*******************************/
+
+	.performers-page .sidebar h3 { font-size: 18px; }
+
+}
+
+@media (max-width: 767px) {
+
+	h2 { font-size: 20px; }
+
+	h3 { font-size: 18px; }
+
+	h4 { font-size: 14px; }
+
+	p { font-size: 12px; }
+
+	time { font-size: 12px; }
+
+	.page-title {
+		left: 0;
+		min-height: 50px;
+		transition: left 0.6s ease-out 0.1s;
+	}
+
+	.page-title h1 {
+		font-size: 16px;
+	}
+
+	.page-title.active, 
+	.content.active {
+		left: 83.33333333%;
+	}
+
+	.sidebar-toggle { display: block; }
+
+	.sidebar {
+		position: absolute;
+		top: 0;
+		left: -84%;
+	}
+
+	.sidebar.active { left: 0; }
+
+	.content {
+		left: 0;
+		transition: left 0.6s ease-out 0.1s;
+	}
+
+	.preview .item .title { font-size: 14px; }
+	
+	/* Навигация */
+	.navbar { padding: 5px; }
+
+	.navbar .menu-logo img { margin: 10px; }
+
+	.navbar-toggle { margin-top: 14px; }
+
+	.navbar-default .navbar-nav>li {
+		padding: 5px;
+		text-align: center;
+	}
+
+	.nav > li > a { display: inline-block; }
+
+	/* Слайдер */
+	.slider { min-height: 250px; }
+
+	.slider .slider-btns { bottom: 20px; }
+
+	/* Задания */
+	.preview .item .description { text-align: justify; }
+
+	/* Лучшие исполнители */
+	.performers div[class^="col-"] { margin-bottom: 20px; }
+
+	/* С нами вы экономите на услугах*/
+	.economy h4 { font-size: 16px; }
+
+	/* Преимущества */
+	.advantages .item { width: 90%; }
+	
+	.advantages .item h3 {
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+
+	.advantages .step {
+		min-height: 190px;
+		box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.6);
+	}
+	
+	.advantages .step div { width: auto; }
+	
+	
+	/*******************************
+	*    Страница - "Заявление"    *
+	*******************************/
+	
+	.application-page .application-form {
+		width: 300px;
+		padding: 30px 15px;
+	}
+
+	.application-page .radio-weight { width: 73%; }
+	
+
+	/*******************************
+	*      Страница - "Задания"    *
+	*******************************/
+	.tasks-page .item .title { max-width: 100%; }
+
+	.tasks-page .item .price, 
+    .task-info-page .item .price {
+		width: 100%;
+		margin: 5px 0;
+		font-size: 14px;
+	}
+
+	/*******************************
+	*   Страница - "Исполнители"   *
+	*******************************/
+	.performers-page .address {
+		padding-bottom: 5px;
+		border-bottom: 1px solid #dcdcdc;
+	}
+    
+    /*******************************
+	*     Страница - "Профиль"     *
+	*******************************/
+    .nav-tabs>li { float: none; }
+    
+    .profile-page .content { padding-top: 10px; }
+    
+    .profile-page .reviews-list .name { font-size: 13px; }
+    
+    .profile-page .media-body p { font-size: 12px; }
+    
+    .profile-page .media-body em { font-size: 13px; }
+    
+    .profile-page .media-footer > div {
+        margin-bottom: 10px;
+        text-align: right;
+    }
+    
+    /*******************************
+	*     Страница - "Задание"     *
+	*******************************/
+    .task-info-page .list-inline>li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 434px) {
+	footer .copyright {
+		float: left;
+	}
+}
+
+
+
+
+
+
+
+
+
